@@ -35,20 +35,20 @@ class CardListDataSource: CardListDataSourceProtocol {
         
         let competitiveness = Bookmark(productName: "Competitiveness", productImagePath: "competitiveness.png", shopName: "Rakuten Books", price: 5231, rating: 4.5, numberOfRatings: 15)
         
-        var temporaryBookmarks = NSMutableArray(array: [canonRebel, marketPlace, basketball, iphone, espresso, glove, baloons, batman, competitiveness, chia])
+        var tempBookmarks = NSMutableArray(array: [canonRebel, marketPlace, basketball, iphone, espresso, glove, baloons, batman, competitiveness, chia])
         
-        return temporaryBookmarks
+        return tempBookmarks
     }()
     
     //--------------------------------------------------------------------------
     
     lazy var cards: NSMutableArray = {
-        var temporaryCards = NSMutableArray()
+        var tempCards = NSMutableArray()
         for object in self.bookmarks {
             let card: UIView = BookmarkCardFactory.createBookmarkCardFromBookmark(object as Bookmark)
-            temporaryCards.addObject(card)
+            tempCards.addObject(card)
         }
-        return temporaryCards
+        return tempCards
     }()
     
     //--------------------------------------------------------------------------
