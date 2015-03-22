@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CAC09991ABEBF550025352D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC09981ABEBF550025352D /* AppDelegate.swift */; };
+		2CAC099B1ABEBF550025352D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC099A1ABEBF550025352D /* ViewController.swift */; };
+		2CAC099E1ABEBF550025352D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CAC099C1ABEBF550025352D /* Main.storyboard */; };
+		2CAC09A01ABEBF550025352D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CAC099F1ABEBF550025352D /* Images.xcassets */; };
+		2CAC09A31ABEBF550025352D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAC09A11ABEBF550025352D /* LaunchScreen.xib */; };
+		2CAC09AF1ABEBF550025352D /* RolyPolySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC09AE1ABEBF550025352D /* RolyPolySwiftTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CAC09A91ABEBF550025352D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CAC098B1ABEBF550025352D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CAC09921ABEBF550025352D;
+			remoteInfo = RolyPolySwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CAC09931ABEBF550025352D /* RolyPolySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RolyPolySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CAC09971ABEBF550025352D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CAC09981ABEBF550025352D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CAC099A1ABEBF550025352D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CAC099D1ABEBF550025352D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CAC099F1ABEBF550025352D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2CAC09A21ABEBF550025352D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2CAC09A81ABEBF550025352D /* RolyPolySwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RolyPolySwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CAC09AD1ABEBF550025352D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CAC09AE1ABEBF550025352D /* RolyPolySwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolyPolySwiftTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CAC09901ABEBF550025352D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CAC09A51ABEBF550025352D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CAC098A1ABEBF550025352D = {
+			isa = PBXGroup;
+			children = (
+				2CAC09951ABEBF550025352D /* RolyPolySwift */,
+				2CAC09AB1ABEBF550025352D /* RolyPolySwiftTests */,
+				2CAC09941ABEBF550025352D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CAC09941ABEBF550025352D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CAC09931ABEBF550025352D /* RolyPolySwift.app */,
+				2CAC09A81ABEBF550025352D /* RolyPolySwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CAC09951ABEBF550025352D /* RolyPolySwift */ = {
+			isa = PBXGroup;
+			children = (
+				2CAC09981ABEBF550025352D /* AppDelegate.swift */,
+				2CAC099A1ABEBF550025352D /* ViewController.swift */,
+				2CAC099C1ABEBF550025352D /* Main.storyboard */,
+				2CAC099F1ABEBF550025352D /* Images.xcassets */,
+				2CAC09A11ABEBF550025352D /* LaunchScreen.xib */,
+				2CAC09961ABEBF550025352D /* Supporting Files */,
+			);
+			path = RolyPolySwift;
+			sourceTree = "<group>";
+		};
+		2CAC09961ABEBF550025352D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CAC09971ABEBF550025352D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CAC09AB1ABEBF550025352D /* RolyPolySwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CAC09AE1ABEBF550025352D /* RolyPolySwiftTests.swift */,
+				2CAC09AC1ABEBF550025352D /* Supporting Files */,
+			);
+			path = RolyPolySwiftTests;
+			sourceTree = "<group>";
+		};
+		2CAC09AC1ABEBF550025352D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CAC09AD1ABEBF550025352D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CAC09921ABEBF550025352D /* RolyPolySwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CAC09B21ABEBF550025352D /* Build configuration list for PBXNativeTarget "RolyPolySwift" */;
+			buildPhases = (
+				2CAC098F1ABEBF550025352D /* Sources */,
+				2CAC09901ABEBF550025352D /* Frameworks */,
+				2CAC09911ABEBF550025352D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RolyPolySwift;
+			productName = RolyPolySwift;
+			productReference = 2CAC09931ABEBF550025352D /* RolyPolySwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CAC09A71ABEBF550025352D /* RolyPolySwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CAC09B51ABEBF550025352D /* Build configuration list for PBXNativeTarget "RolyPolySwiftTests" */;
+			buildPhases = (
+				2CAC09A41ABEBF550025352D /* Sources */,
+				2CAC09A51ABEBF550025352D /* Frameworks */,
+				2CAC09A61ABEBF550025352D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CAC09AA1ABEBF550025352D /* PBXTargetDependency */,
+			);
+			name = RolyPolySwiftTests;
+			productName = RolyPolySwiftTests;
+			productReference = 2CAC09A81ABEBF550025352D /* RolyPolySwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CAC098B1ABEBF550025352D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Dmitry Fedoseev";
+				TargetAttributes = {
+					2CAC09921ABEBF550025352D = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					2CAC09A71ABEBF550025352D = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 2CAC09921ABEBF550025352D;
+					};
+				};
+			};
+			buildConfigurationList = 2CAC098E1ABEBF550025352D /* Build configuration list for PBXProject "RolyPolySwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CAC098A1ABEBF550025352D;
+			productRefGroup = 2CAC09941ABEBF550025352D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CAC09921ABEBF550025352D /* RolyPolySwift */,
+				2CAC09A71ABEBF550025352D /* RolyPolySwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CAC09911ABEBF550025352D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CAC099E1ABEBF550025352D /* Main.storyboard in Resources */,
+				2CAC09A31ABEBF550025352D /* LaunchScreen.xib in Resources */,
+				2CAC09A01ABEBF550025352D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CAC09A61ABEBF550025352D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CAC098F1ABEBF550025352D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CAC099B1ABEBF550025352D /* ViewController.swift in Sources */,
+				2CAC09991ABEBF550025352D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CAC09A41ABEBF550025352D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CAC09AF1ABEBF550025352D /* RolyPolySwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CAC09AA1ABEBF550025352D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CAC09921ABEBF550025352D /* RolyPolySwift */;
+			targetProxy = 2CAC09A91ABEBF550025352D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CAC099C1ABEBF550025352D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CAC099D1ABEBF550025352D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CAC09A11ABEBF550025352D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CAC09A21ABEBF550025352D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CAC09B01ABEBF550025352D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2CAC09B11ABEBF550025352D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CAC09B31ABEBF550025352D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RolyPolySwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CAC09B41ABEBF550025352D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RolyPolySwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2CAC09B61ABEBF550025352D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RolyPolySwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RolyPolySwift.app/RolyPolySwift";
+			};
+			name = Debug;
+		};
+		2CAC09B71ABEBF550025352D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RolyPolySwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RolyPolySwift.app/RolyPolySwift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CAC098E1ABEBF550025352D /* Build configuration list for PBXProject "RolyPolySwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CAC09B01ABEBF550025352D /* Debug */,
+				2CAC09B11ABEBF550025352D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CAC09B21ABEBF550025352D /* Build configuration list for PBXNativeTarget "RolyPolySwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CAC09B31ABEBF550025352D /* Debug */,
+				2CAC09B41ABEBF550025352D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CAC09B51ABEBF550025352D /* Build configuration list for PBXNativeTarget "RolyPolySwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CAC09B61ABEBF550025352D /* Debug */,
+				2CAC09B71ABEBF550025352D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CAC098B1ABEBF550025352D /* Project object */;
+}
