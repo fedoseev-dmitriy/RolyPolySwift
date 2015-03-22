@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         let cardListDataSource = CardListDataSource()
-        let cardListViewController = CardListViewController.initWithDataSourceDelegate(cardListDataSource, 0)
+        let cardListViewController = CardListViewController(dataSource: cardListDataSource, delegate: nil)
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.makeKeyAndVisible()

@@ -19,6 +19,7 @@ class BookmarkCardProxy {
 
 }
 
+////////////////////////////////////////////////////////////////////////////
 
 class BookmarkCardFactory {
     class func createBookmarkCardFromBookmark(bookmark: Bookmark) -> UIView {

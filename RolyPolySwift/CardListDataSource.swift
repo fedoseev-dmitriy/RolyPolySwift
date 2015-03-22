@@ -11,6 +11,8 @@ import UIKit
 
 class CardListDataSource: CardListDataSourceProtocol {
     
+    //--------------------------------------------------------------------------
+    
     lazy var bookmarks: NSMutableArray = {
     
         let canonRebel = Bookmark(productName: "Canon EOS Rebel T4i", productImagePath: "canon-rebel.png", shopName: "New Egg", price: 80614, rating: 4.5, numberOfRatings: 756)
@@ -38,6 +40,8 @@ class CardListDataSource: CardListDataSourceProtocol {
         return temporaryBookmarks
     }()
     
+    //--------------------------------------------------------------------------
+    
     lazy var cards: NSMutableArray = {
         var temporaryCards = NSMutableArray()
         for object in self.bookmarks {
@@ -47,14 +51,19 @@ class CardListDataSource: CardListDataSourceProtocol {
         return temporaryCards
     }()
     
+    //--------------------------------------------------------------------------
     
     func numberOfCardsForCardList(cardList: CardListViewController) -> Int {
         return self.cards.count
     }
+    
+    //--------------------------------------------------------------------------
 
     func cardForItemAtIndex(cardList: CardListViewController, index: Int) -> UIView {
         return self.cards.objectAtIndex(index) as UIView
     }
+    
+    //--------------------------------------------------------------------------
     
     func removeCardAtIndex(cardList: CardListViewController, index: Int) {
         self.cards.removeObjectAtIndex(index)

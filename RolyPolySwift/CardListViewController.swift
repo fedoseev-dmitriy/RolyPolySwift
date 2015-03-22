@@ -33,20 +33,31 @@ enum Direction {
 class CardListViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate {
 
 
-    var dataSource: CardListDataSource?
-    var delegate: CardListDelegate?
+    weak var dataSource: CardListDataSourceProtocol?
+    weak var delegate: CardListDelegate?
     
-    var padding: CGFloat?
-    var cardWidth: CGFloat?
-    var defaultCardHeight: CGFloat?
+    var padding: CGFloat? {
+        return 25
+    }
+    var cardWidth: CGFloat? {
+        return self.view.frame.size.width - 20
+    }
+    var defaultCardHeight: CGFloat? {
+        return 250
+    }
+    var numberOfCards: Int? {
+        return self.dataSource?.numberOfCardsForCardList(self)
+    }
+    lazy var cardPositions: NSMutableArray
+    lazy var cardHeights: NSMutableArray
+    lazy var visibleCards: NSMutableDictionary
     
-    var numberOfCards: Int?
-    var cardPositions: NSMutableArray?
-    var cardHeights: NSMutableArray?
-    var visibleCards: NSMutableDictionary?
-    
-    var slideDuration: CGFloat?
-    var slideDelay: CGFloat?
+    var slideDuration: CGFloat? {
+        return 0.4
+    }
+    var slideDelay: CGFloat? {
+        return 0.2
+    }
     
     var indexOfFirstVisibleCard: Int?
     var indexOfLastVisibleCard: Int?
@@ -56,8 +67,7 @@ class CardListViewController: UIViewController, UIScrollViewDelegate, UIGestureR
     
     // MARK: - Default Initializer
     
-    convenience init(dataSource: CardListDataSource, delegate: CardListDelegate) {
-        self.init()
+    convenience init(dataSource: CardListDataSourceProtocol?, delegate: CardListDelegate?) {
         self.dataSource = dataSource
         self.delegate = delegate
     }
@@ -94,21 +104,76 @@ class CardListViewController: UIViewController, UIScrollViewDelegate, UIGestureR
             return
         }
         
-        while self.shouldIncrementIndexOfLastVisibleCard
+        while self.shouldDecrementIndexOfFirstVisibleCard() {
+            self.indexOfFirstVisibleCard -= 1
+            self.loadCardAtIndex(self.indexOfFirstVisibleCard, false)
+        }
+        
+        while self.shouldIncrementIndexOfFirstVisibleCard() {
+            self.unloadCardAtIndex(self.indexOfFirstVisibleCard)
+            self.indexOfFirstVisibleCard += 1
+        }
+        
+        // update index of last visible card
+        while self.shouldIncrementIndexOfLastVisibleCard() {
+            self.indexOfLastVisibleCard += 1
+            var animated = self.indexOfLastVisibleCard > self.indexOfFurthestVisitedCard
+            self.loadCardAtIndex(self.indexOfLastVisibleCard, animated: animated)
+        }
+        
+        while self.shouldDecrementIndexOfLastVisibleCard() {
+            self.unloadCardAtIndex(self.indexOfLastVisibleCard)
+            self.indexOfLastVisibleCard -= 1
+        }
+
     }
     
     // MARK: - Loading and Unloading Cards
     
     func loadInitiallyVisibleCards() {
-        self.loadCardAtIndex(self.indexOfLastVisibleCard, true)
+        self.loadCardAtIndex(self.indexOfLastVisibleCard!, true)
         
-        let delay = 0.3
+        let delay: CGFloat = 0.3
         
-        while
+        while self.shouldIncrementIndexOfLastVisibleCard() {
+            self.indexOfLastVisibleCard += 1
+            var index = self.indexOfLastVisibleCard
+            
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC));
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                self.loadCardAtIndex(index, animated: true)
+                });
+            delay += 0.3
+        }
     }
-    
+
     func loadCardAtIndex(index: Int, animated: Bool) {
+        var card: UIView = self.dataSource!.cardForItemAtIndex(self, index: index)
+        var width: CGFloat = self.cardWidth!
+        var height: CGFloat = CGFloat(self.cardHeights!.objectAtIndex(index).floatValue)
+        var x: CGFloat = self.view.center.x - width / 2
+        var y: CGFloat = CGFloat(self.cardPositions!.objectAtIndex(index).floatValue)
         
+
+        card.frame = CGRectMake(x, y, width, height)
+        
+        var panRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanFromRecognizer:")
+        panRecognizer.delegate = self
+        card.addGestureRecognizer(panRecognizer)
+        
+        var key = NSNumber(integer: index)
+      
+        self.visibleCards?.setObject(card, forKey: key)
+        self.view.addSubview(card)
+        
+        if animated {
+            self.slideCardIntoPlace(card)
+        }
+        
+        if index > self.indexOfFurthestVisitedCard {
+            self.indexOfFurthestVisitedCard = index;
+        }
+
     }
     
     func unloadCardAtIndex(index: Int) {
@@ -141,7 +206,7 @@ class CardListViewController: UIViewController, UIScrollViewDelegate, UIGestureR
         
     }
     
-    func slideCardOffScreeninDirection(card: UIView, direction: Direction, completion:block {
+    func slideCardOffScreeninDirection(card: UIView, direction: Direction, completion:{ {
         
     }
     
@@ -190,7 +255,16 @@ class CardListViewController: UIViewController, UIScrollViewDelegate, UIGestureR
     }
     
     func indexForVisibleCard(card: UIView) -> Int {
+        var index = self.indexOfFirstVisibleCard
         
+        while index < self.indexOfLastVisibleCard {
+        var key: NSNumber = NSNumber(index)
+        if self.visibleCards.objectForKey(key) == card {
+        break
+        }
+        index++
+        }
+        return index
     }
     
     func frameForCardAtIndex(index: Int) -> CGRect {
