@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let cardListViewController = CardListViewController(dataSource: cardListDataSource, delegate: nil)
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = cardListViewController
+        self.window!.makeKeyAndVisible()
+        self.window!.rootViewController = cardListViewController
         return true
     }
 

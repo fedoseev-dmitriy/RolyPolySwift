@@ -44,8 +44,8 @@ class CardListDataSource: CardListDataSourceProtocol {
     
     lazy var cards: NSMutableArray = {
         var tempCards = NSMutableArray()
-        for object in self.bookmarks {
-            let card: UIView = BookmarkCardFactory.createBookmarkCardFromBookmark(object as Bookmark)
+        for bookmark in self.bookmarks {
+            var card: UIView = BookmarkCardFactory.createBookmarkCardFromBookmark(bookmark as Bookmark)
             tempCards.addObject(card)
         }
         return tempCards

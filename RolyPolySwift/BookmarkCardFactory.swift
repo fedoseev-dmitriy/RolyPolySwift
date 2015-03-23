@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BookmarkCardProxy {
+class BookmarkCardProxy : NSObject {
     @IBOutlet var productName: UILabel!
     @IBOutlet var productImage: UIImageView!
     @IBOutlet var shopName: UILabel!
@@ -21,11 +21,13 @@ class BookmarkCardProxy {
 
 ////////////////////////////////////////////////////////////////////////////
 
-class BookmarkCardFactory {
+class BookmarkCardFactory : NSObject {
+    
     class func createBookmarkCardFromBookmark(bookmark: Bookmark) -> UIView {
         
         var proxy = BookmarkCardProxy()
-        var bookmarkCard: UIView = NSBundle.mainBundle().loadNibNamed("BookmarkCardView", owner: proxy, options: nil)[0] as UIView
+        var bookmarkCard = NSBundle.mainBundle().loadNibNamed("BookmarkCardView", owner: proxy, options: nil)[0] as UIView
+        
         proxy.productName.text = bookmark.productName
         proxy.productImage.image = UIImage(named: bookmark.productImagePath)
         proxy.shopName.text = bookmark.shopName
@@ -40,7 +42,6 @@ class BookmarkCardFactory {
         bookmarkCard.layer.shouldRasterize = true
         
         return bookmarkCard
-        
     }
     
     class func currencyStringForPrice(price: Int) -> String {
