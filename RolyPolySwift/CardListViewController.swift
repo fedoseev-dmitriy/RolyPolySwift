@@ -46,7 +46,7 @@ class CardListViewController: UIViewController, UIScrollViewDelegate, UIGestureR
         return 250
     }
     
-    lazy var numberOfCards: Int = { // note there may be a mistake
+    lazy var numberOfCards: Int = {
         var tempNumberOfCards = self.dataSource!.numberOfCardsForCardList(self)
         return tempNumberOfCards
     }()
@@ -231,14 +231,17 @@ class CardListViewController: UIViewController, UIScrollViewDelegate, UIGestureR
     }
     
     func slideCardIntoPlace(card: UIView) {
-        var enterFromLeft = false
-        enterFromLeft = !enterFromLeft
+        struct Static {
+            static var enterFromLeft = false
+        }
+        
+        Static.enterFromLeft = !Static.enterFromLeft
         
         var scrollView: UIScrollView = self.view as UIScrollView
         var yOffset = 200 + scrollView.contentOffset.y + scrollView.frame.size.height - card.frame.origin.y
         
         
-        card.transform = CGAffineTransformConcat(CGAffineTransformMakeTranslation(0, yOffset),CGAffineTransformMakeRotation(CGFloat(enterFromLeft ? M_PI/10 : -M_PI/10)))
+        card.transform = CGAffineTransformConcat(CGAffineTransformMakeTranslation(0, yOffset),CGAffineTransformMakeRotation(CGFloat(Static.enterFromLeft ? M_PI/10 : -M_PI/10)))
         
         UIView.animateWithDuration(Double(self.slideDuration), delay: Double(self.slideDelay), options: .CurveEaseOut, animations: { () -> Void in
             card.transform = CGAffineTransformIdentity

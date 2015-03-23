@@ -44,7 +44,6 @@
 		2C03A9D11ABF6B4B005BC166 /* stars-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C03A9AC1ABF6B4B005BC166 /* stars-4@2x.png */; };
 		2C03A9D21ABF6B4B005BC166 /* stars-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C03A9AD1ABF6B4B005BC166 /* stars-5.png */; };
 		2C03A9D31ABF6B4B005BC166 /* stars-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C03A9AE1ABF6B4B005BC166 /* stars-5@2x.png */; };
-		2C03A9D81ABF6E52005BC166 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C03A9D71ABF6E52005BC166 /* Reveal.framework */; };
 		2CAC09991ABEBF550025352D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC09981ABEBF550025352D /* AppDelegate.swift */; };
 		2CAC09A01ABEBF550025352D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CAC099F1ABEBF550025352D /* Images.xcassets */; };
 		2CAC09A31ABEBF550025352D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAC09A11ABEBF550025352D /* LaunchScreen.xib */; };
@@ -103,7 +102,6 @@
 		2C03A9AC1ABF6B4B005BC166 /* stars-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stars-4@2x.png"; path = "Resource/stars-4@2x.png"; sourceTree = "<group>"; };
 		2C03A9AD1ABF6B4B005BC166 /* stars-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stars-5.png"; path = "Resource/stars-5.png"; sourceTree = "<group>"; };
 		2C03A9AE1ABF6B4B005BC166 /* stars-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stars-5@2x.png"; path = "Resource/stars-5@2x.png"; sourceTree = "<group>"; };
-		2C03A9D71ABF6E52005BC166 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = SOURCE_ROOT; };
 		2CAC09931ABEBF550025352D /* RolyPolySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RolyPolySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAC09971ABEBF550025352D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CAC09981ABEBF550025352D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C03A9D81ABF6E52005BC166 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +245,6 @@
 		2CAC09AC1ABEBF550025352D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2C03A9D71ABF6E52005BC166 /* Reveal.framework */,
 				2CAC09AD1ABEBF550025352D /* Info.plist */,
 			);
 			name = "Supporting Files";
