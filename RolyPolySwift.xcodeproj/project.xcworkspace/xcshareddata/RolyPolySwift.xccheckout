@@ -20,6 +20,11 @@
 		<key>31D44FFCAD50A9813CD55672E16A80F2042B28DB</key>
 		<string>../..</string>
 	</dict>
+	<key>IDESourceControlProjectRequiredConfigurationsDictionary</key>
+	<dict>
+		<key>31D44FFCAD50A9813CD55672E16A80F2042B28DB</key>
+		<true/>
+	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/fedoseevd/RolyPolySwift.git</string>
 	<key>IDESourceControlProjectVersion</key>

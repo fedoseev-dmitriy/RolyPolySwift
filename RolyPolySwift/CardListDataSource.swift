@@ -45,7 +45,7 @@ class CardListDataSource: CardListDataSourceProtocol {
     lazy var cards: NSMutableArray = {
         var tempCards = NSMutableArray()
         for bookmark in self.bookmarks {
-            var card: UIView = BookmarkCardFactory.createBookmarkCardFromBookmark(bookmark as Bookmark)
+            var card: UIView = BookmarkCardFactory.createBookmarkCardFromBookmark(bookmark as! Bookmark)
             tempCards.addObject(card)
         }
         return tempCards
@@ -53,19 +53,19 @@ class CardListDataSource: CardListDataSourceProtocol {
     
     //--------------------------------------------------------------------------
     
-    func numberOfCardsForCardList(cardList: CardListViewController) -> Int {
+    @objc func numberOfCardsForCardList(cardList: CardListViewController) -> Int {
         return self.cards.count
     }
     
     //--------------------------------------------------------------------------
 
-    func cardForItemAtIndex(cardList: CardListViewController, index: Int) -> UIView {
-        return self.cards.objectAtIndex(index) as UIView
+    @objc func cardForItemAtIndex(cardList: CardListViewController, index: Int) -> UIView {
+        return self.cards.objectAtIndex(index) as! UIView
     }
     
     //--------------------------------------------------------------------------
     
-    func removeCardAtIndex(cardList: CardListViewController, index: Int) {
+    @objc func removeCardAtIndex(cardList: CardListViewController, index: Int) {
         self.cards.removeObjectAtIndex(index)
     }
 }

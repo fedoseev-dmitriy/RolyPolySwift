@@ -26,14 +26,14 @@ class BookmarkCardFactory : NSObject {
     class func createBookmarkCardFromBookmark(bookmark: Bookmark) -> UIView {
         
         var proxy = BookmarkCardProxy()
-        var bookmarkCard = NSBundle.mainBundle().loadNibNamed("BookmarkCardView", owner: proxy, options: nil)[0] as UIView
+        var bookmarkCard = NSBundle.mainBundle().loadNibNamed("BookmarkCardView", owner: proxy, options: nil)[0] as! UIView
         
         proxy.productName.text = bookmark.productName
         proxy.productImage.image = UIImage(named: bookmark.productImagePath)
         proxy.shopName.text = bookmark.shopName
         proxy.price.text = BookmarkCardFactory.currencyStringForPrice(bookmark.price)
         proxy.rating.image = UIImage(named: BookmarkCardFactory.starImagePathForRating(bookmark.rating))
-        proxy.numberOfRatings.text = NSString(format: "(%d)", bookmark.numberOfRatings)
+        proxy.numberOfRatings.text = NSString(format: "(%d)", bookmark.numberOfRatings) as String
         
         bookmarkCard.layer.cornerRadius = 3
         bookmarkCard.layer.borderColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0).CGColor
